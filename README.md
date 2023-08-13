@@ -1,6 +1,6 @@
-# pong3D
+# PONG3D
 
-Ce projet est un jeu développé en utilisant Babylon.js. Le jeu propose plusieurs cartes, modes de jeu et niveaux de difficulté pour offrir une expérience de jeu diversifiée.
+Ce projet est un jeu développé en utilisant Babylon.js inspiré du célèbre jeu de PONG.
 
 Installation
 Clonez ce dépôt :
