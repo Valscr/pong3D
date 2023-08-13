@@ -23,3 +23,11 @@ Lancer le Jeu
 npm run dev
 ```
 Ouvrez votre navigateur et accédez à l'URL spécifié pour jouer au jeu.
+
+![Capture d'écran du jeu](capture/screen2.png)
+
+![Capture d'écran du jeu](capture/screen3.png)
+
+![Capture d'écran du jeu](capture/screen4.png)
+
+![Capture d'écran du jeu](capture/screen5.png)
