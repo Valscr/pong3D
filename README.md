@@ -1,6 +1,6 @@
 # PONG3D
 
-![Capture d'écran du jeu](public/back12.jpg)
+![Capture d'écran du jeu](capture/screen.jpg)
 
 Ce projet est un jeu développé en utilisant Babylon.js inspiré du célèbre jeu de PONG.
 
