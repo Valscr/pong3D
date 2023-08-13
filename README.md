@@ -21,10 +21,3 @@ Lancer le Jeu
 npm run dev
 ```
 Ouvrez votre navigateur et accédez à l'URL spécifié pour jouer au jeu.
-
-Fonctionnalités
-Cartes : Le jeu propose plusieurs cartes uniques.
-
-Modes de Jeu : Le jeu offre deux modes de jeu : le mode FPS (First-Person Shooter) et le mode Pong original. Les joueurs peuvent basculer entre ces modes pour varier leur expérience de jeu.
-
-Niveaux de Difficulté : Le jeu possède plusieurs niveaux de difficulté.
