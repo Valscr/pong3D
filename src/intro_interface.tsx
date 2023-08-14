@@ -116,6 +116,7 @@ export function createintroGUI(elements, Interface, scene, difficulties, points_
         wood_theme.dispose();
         football_theme.dispose();
         futur_theme.dispose();
+        elements.started = 0;
         animation_intro(elements, scene, Interface, difficulties, points_game);
     });
     difficulties_easy_Button.onPointerClickObservable.add(() => {

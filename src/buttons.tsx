@@ -37,7 +37,10 @@ export function setDiffilcultyExpert(difficulties, elements, scene) {
       scene
     );
     elements.column.position.x = 1;
-    elements.column.position.y = 7;
+    if (elements.started === -1)
+      elements.column.position.y = 0.5;
+    else
+      elements.column.position.y = 7;
     elements.column.position.z = 0;
     elements.column.material = material_column;
     elements.column.checkCollisions = true;
@@ -51,41 +54,42 @@ export function setDiffilcultyExpert(difficulties, elements, scene) {
     elements.column3 = elements.column.clone();
     elements.column3.position.x = -2.5;
   
-    const animation = new BABYLON.Animation(
-      'columnAnimation',
-      'position.y',
-      30, // Frame per second
-      BABYLON.Animation.ANIMATIONTYPE_FLOAT,
-      BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT
-    );
-      const keyFrames = [
-        { frame: 0, value: elements.column.position.y },
-        { frame: 40, value: elements.column.position.y - 6.5 }
-      ];
-      animation.setKeys(keyFrames);
+    if (elements.started > -1)
+    {
+      const animation = new BABYLON.Animation(
+        'columnAnimation',
+        'position.y',
+        30, // Frame per second
+        BABYLON.Animation.ANIMATIONTYPE_FLOAT,
+        BABYLON.Animation.ANIMATIONLOOPMODE_CONSTANT
+      );
+        const keyFrames = [
+          { frame: 0, value: elements.column.position.y },
+          { frame: 40, value: elements.column.position.y - 6.5 }
+        ];
+        animation.setKeys(keyFrames);
+        
+        elements.column.animations.push(animation);
+        elements.column1.animations.push(animation);
+        elements.column2.animations.push(animation);
+        elements.column3.animations.push(animation);
       
-      elements.column.animations.push(animation);
-      elements.column1.animations.push(animation);
-      elements.column2.animations.push(animation);
-      elements.column3.animations.push(animation);
+        scene.beginAnimation(elements.column, 0, 40, false);
+        scene.beginAnimation(elements.column1, 0, 40, false);
+        scene.beginAnimation(elements.column2, 0, 40, false);
+        scene.beginAnimation(elements.column3, 0, 40, false);
     
-      scene.beginAnimation(elements.column, 0, 40, false);
-      scene.beginAnimation(elements.column1, 0, 40, false);
-      scene.beginAnimation(elements.column2, 0, 40, false);
-      scene.beginAnimation(elements.column3, 0, 40, false);
-  
-      scene.addMesh(elements.column);
-      scene.addMesh(elements.column1);
-      scene.addMesh(elements.column2);
-      scene.addMesh(elements.column3);
-  
+        scene.addMesh(elements.column);
+        scene.addMesh(elements.column1);
+        scene.addMesh(elements.column2);
+        scene.addMesh(elements.column3);
+      }
       setTimeout(() => {
         elements.column.physicsImpostor = new BABYLON.PhysicsImpostor(elements.column, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0, restitution: 1}, scene);
         elements.column1.physicsImpostor = new BABYLON.PhysicsImpostor(elements.column1, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0, restitution: 1}, scene);
         elements.column2.physicsImpostor = new BABYLON.PhysicsImpostor(elements.column2, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0, restitution: 1}, scene);
         elements.column3.physicsImpostor = new BABYLON.PhysicsImpostor(elements.column3, BABYLON.PhysicsImpostor.BoxImpostor, { mass: 0, friction: 0, restitution: 1}, scene);
       }, 1500);
-     
   }
 
 const message_count = new GUI.TextBlock();

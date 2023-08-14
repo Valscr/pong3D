@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import * as BABYLON from '@babylonjs/core';
 import * as GUI from '@babylonjs/gui';
 import {createGUI, showMessage} from './interface'

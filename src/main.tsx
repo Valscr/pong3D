@@ -1,4 +1,3 @@
-import React, { useEffect, useRef } from 'react';
 import * as BABYLON from '@babylonjs/core';
 import * as GUI from '@babylonjs/gui';
 import { AdvancedDynamicTexture} from '@babylonjs/gui';
@@ -54,7 +53,7 @@ import { createintroGUI } from './intro_interface';
       light3: undefined,
       lightshadow: undefined,
       textures: textures,
-      started: 0,
+      started: -1,
     }
 
     const Interface = {
