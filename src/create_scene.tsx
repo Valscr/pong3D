@@ -29,7 +29,6 @@ export function restartScene(elements, difficulties, advancedTexture) {
     scene.clearColor = BABYLON.Color3.Black();
     
     //elements.camera.attachControl(canvas, true);
-    animation_intro(elements, scene, Interface, difficulties, points_game);
 
     elements.light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 10, 0), scene);
     elements.light2 = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 10, -6), scene);

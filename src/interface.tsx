@@ -152,9 +152,9 @@ export function createGUI(elements, Interface, scene, difficulties, points_game)
   elements.camera.position = new BABYLON.Vector3(0, 20, 0);
   elements.lightshadow.intensity = 0.15;
   elements.camera.alpha = -Math.PI;
-  elements.light.intensity = 0.1;
-  elements.light2.intensity = 0.1;
-  elements.light3.intensity = 0.1;
+  elements.light.intensity = 0.12;
+  elements.light2.intensity = 0.12;
+  elements.light3.intensity = 0.12;
   });
 
   changeModeFps.onPointerClickObservable.add(() => {

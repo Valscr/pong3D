@@ -6,6 +6,7 @@ import {createGUI, showMessage} from './interface'
 import {ConfigureTextBlocks} from './buttons'
 import {createScene, restartScene} from './create_scene'
 import {play_management} from './playing';
+import { createintroGUI } from './intro_interface';
 
     const difficulties = {
       type: 2,
@@ -24,6 +25,7 @@ import {play_management} from './playing';
     const engine = new BABYLON.Engine(canvas, true, { preserveDrawingBuffer: true, stencil: true, disableWebGL2Support: false });
     var scene = new BABYLON.Scene(engine);
     const textures = {
+        theme: 1,
         texture_wood_wall: new BABYLON.Texture("wooden_diff.jpg", scene),
         texture_wood_ground: new BABYLON.Texture("raw_plank.jpeg", scene),
         texture_wood_back: new BABYLON.Texture("back3.jpg", scene),
@@ -61,7 +63,8 @@ import {play_management} from './playing';
       textBlock2: new GUI.TextBlock(),
     }
 
-    
+    createintroGUI(elements, Interface, scene, difficulties, points_game);
+
     let boxDirection = "";
     function updateBoxPosition() {
       const step = 0.1;
