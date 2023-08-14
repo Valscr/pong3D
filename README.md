@@ -2,7 +2,7 @@
 
 ![Capture d'écran du jeu](capture/screen.png)
 
-Ce projet est un jeu développé en utilisant Babylon.js inspiré du célèbre jeu de PONG.
+Jeu développé en utilisant Babylon.js inspiré du célèbre jeu de PONG.
 
 Installez les dépendances :
 ```bash
