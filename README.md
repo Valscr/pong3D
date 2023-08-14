@@ -2,17 +2,17 @@
 
 ![Capture d'écran du jeu](capture/screen.png)
 
-Jeu développé en utilisant Babylon.js inspiré du célèbre jeu de PONG.
+Game developed using Babylon.js, inspired by the famous PONG game.
 
-Installez les dépendances :
+Install dependencies:
 ```bash
 npm install
 ```
-Lancer le Jeu
+Run the game:
 ```bash
 npm run dev
 ```
-Ouvrez votre navigateur et accédez à l'URL spécifié pour jouer au jeu.
+Open your browser and navigate to the specified URL to play the game.
 
 ![Capture d'écran du jeu](capture/screen2.png)
 
